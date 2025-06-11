@@ -11,6 +11,7 @@ public static class SqlHelpers
             .FirstOrDefault(n => n.EndsWith(resourceName, StringComparison.OrdinalIgnoreCase));
         if (fullResourceName == null)
         {
+            Console.WriteLine($"Could not find embedded resource named {resourceName}");
             throw new Exception($"Could not find embedded resource named {resourceName}");
         }
         using var stream = assembly.GetManifestResourceStream(fullResourceName);
