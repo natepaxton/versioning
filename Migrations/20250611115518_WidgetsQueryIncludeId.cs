@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using VersioningDemo.Helpers;
 
 #nullable disable
 
@@ -10,13 +11,15 @@ namespace VersioningDemo.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-
+            var sql = SqlHelpers.GetEmbeddedResource("usp_WidgetsQuery_V03.sql");
+            migrationBuilder.Sql(sql);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-
+            var sql = SqlHelpers.GetEmbeddedResource("usp_WidgetsQuery_V02.sql");
+            migrationBuilder.Sql(sql);
         }
     }
 }
