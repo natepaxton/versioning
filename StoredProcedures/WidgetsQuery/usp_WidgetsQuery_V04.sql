@@ -10,9 +10,9 @@
 CREATE OR REPLACE FUNCTION usp_WidgetsQuery()
 RETURNS TABLE (Color text, Dimensions text, Shape text) AS $$
 BEGIN
-RETURN QUERY
-SELECT "Color", "Dimensions", "Shape"
-FROM "Widgets"
-WHERE "IsActive" = TRUE;
+    RETURN QUERY
+    SELECT "Color", "Dimensions", "Shape"
+    FROM "Widgets"
+    WHERE "IsActive" = TRUE;
 END;
 $$ LANGUAGE plpgsql;
