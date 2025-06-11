@@ -10,7 +10,7 @@
         In this example, the folder is StoredProcedures
 2.  Add a folder to hold the versions of your new script.  In this example, the folder
     is WidgetsQuery
-3. Within the folder for your script, create your procedure file with appended with _V00.
+3. Within the folder for your script, create your procedure file appended with _V00.
 4. Copy your V00 file and paste it into the same folder, removing the V00 and replacing it
    with Master
 5. Use ```dotnet ef migrations add``` to add a migrator to the project.
