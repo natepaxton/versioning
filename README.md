@@ -10,7 +10,7 @@
         In this example, the folder is StoredProcedures
 2.  Add a folder to hold the versions of your new script.  In this example, the folder
     is WidgetsQuery
-3. Within the folder for your script, create your procedure file with appended with _V00.
+3. Within the folder for your script, create your procedure file appended with _V00.
 4. Copy your V00 file and paste it into the same folder, removing the V00 and replacing it
    with Master
 5. Use ```dotnet ef migrations add``` to add a migrator to the project.
@@ -89,4 +89,3 @@
 - The SqlHelper method will look for file names containing the provided string.  You must include the 
   version number in the search string to avoid returning a different version of the procedure
 - You will forget to update the master at some point.
-- 

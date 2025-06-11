@@ -7,6 +7,7 @@
 --06/11/2025 - NPaxton - Removed Id from query    
 ------------------------------------------------------------------------------------------------------------------------
 
+DROP FUNCTION IF EXISTS usp_WidgetsQuery();
 CREATE OR REPLACE FUNCTION usp_WidgetsQuery()
 RETURNS TABLE (Color text, Dimensions text, Shape text) AS $$
 BEGIN
